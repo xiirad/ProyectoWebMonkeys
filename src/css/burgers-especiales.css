@@ -1,0 +1,57 @@
+ .seccion_burgers_especiales {
+   display: grid;
+   gap: 1.75rem;
+ }
+
+ .texto_intro_especiales {
+   max-width: 34rem;
+  font-size: var(--tam-parrafo);
+  color: var(--color-secundario);
+  opacity: 0.8;
+ }
+
+ .grid_especiales {
+   display: grid;
+   gap: 1.5rem;
+ }
+
+ .tarjeta_especial {
+   padding: 1.4rem 1.25rem;
+  border-radius: 1.25rem;
+  background-color: var(--color-fondo);
+   display: grid;
+   gap: 0.5rem;
+ }
+
+ .tarjeta_especial_etiqueta {
+  font-size: var(--tam-subenunciado);
+   text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-secundario);
+  opacity: 0.7;
+ }
+
+ .tarjeta_especial_titulo {
+  font-size: var(--tam-parrafo);
+   font-weight: 700;
+ }
+
+ .tarjeta_especial_detalle {
+  font-size: var(--tam-parrafo);
+  color: var(--color-secundario);
+  opacity: 0.82;
+ }
+
+ .tarjeta_especial_estado {
+   margin-top: 0.3rem;
+  font-size: var(--tam-parrafo);
+  color: var(--color-secundario);
+  opacity: 0.7;
+ }
+
+ @media (min-width: 768px) {
+   .grid_especiales {
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+   }
+ }
+

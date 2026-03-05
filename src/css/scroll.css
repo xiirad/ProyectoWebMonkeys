@@ -1,0 +1,26 @@
+ html {
+   scrollbar-width: thin;
+   scrollbar-color: var(--color-principal) var(--color-fondo);
+ }
+
+ body::-webkit-scrollbar {
+   width: 8px;
+ }
+
+ body::-webkit-scrollbar-track {
+   background-color: var(--color-fondo);
+ }
+
+ body::-webkit-scrollbar-thumb {
+   background-color: var(--color-principal);
+ }
+
+ body::-webkit-scrollbar-thumb:hover {
+   background-color: var(--color-acento);
+ }
+
+ ::selection {
+   background-color: var(--color-principal);
+   color: var(--color-fondo);
+ }
+

@@ -1,0 +1,95 @@
+ .seccion_sobre {
+   display: grid;
+   gap: 2rem;
+ }
+
+ .grid_sobre {
+   display: grid;
+   gap: 1.75rem;
+ }
+
+ .bloque_sobre {
+  background-color: var(--color-fondo);
+  border-radius: 1.5rem;
+   padding: 1.5rem 1.25rem;
+   display: grid;
+   gap: 0.9rem;
+ }
+
+ .texto_sobre {
+  font-size: var(--tam-parrafo);
+  color: var(--color-secundario);
+  opacity: 0.86;
+ }
+
+ .bloque_contacto {
+   display: grid;
+   gap: 1rem;
+  font-size: var(--tam-parrafo);
+ }
+
+ .fila_contacto {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 0.5rem 0.75rem;
+ }
+
+ .etiqueta_contacto {
+   font-weight: 600;
+ }
+
+ .telefono_destacado {
+   font-weight: 700;
+   color: var(--color-principal);
+ }
+
+ .grupo_redes {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.75rem;
+ }
+
+ .icono_red_social {
+   width: 34px;
+   height: 34px;
+   border-radius: 999px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+ font-size: var(--tam-parrafo);
+  font-weight: 600;
+  background-color: var(--color-fondo);
+   cursor: pointer;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+ }
+
+ .icono_red_social:hover {
+   transform: translateY(-1px);
+  box-shadow: 0 8px 18px var(--color-fondo);
+ }
+
+ .icono_instagram {
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+ }
+
+ .icono_whatsapp {
+  background-color: var(--color-acento);
+  color: var(--color-secundario);
+ }
+
+ .nota_pedidos {
+   margin-top: 0.5rem;
+  font-size: var(--tam-parrafo);
+  color: var(--color-secundario);
+  opacity: 0.8;
+ }
+
+ @media (min-width: 768px) {
+   .grid_sobre {
+     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+     gap: 2rem;
+   }
+ }
+

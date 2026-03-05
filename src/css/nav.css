@@ -1,0 +1,43 @@
+ .barra_navegacion {
+   position: fixed;
+   inset-inline: 0;
+   top: 0;
+   z-index: 20;
+   display: flex;
+   justify-content: center;
+   padding: 2rem 1rem;
+   background-color: var(--color-fondo);
+   opacity: 0.96;
+ }
+
+ .lista_nav {
+   list-style: none;
+   display: flex;
+   gap: 1.5rem;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+ }
+
+ .enlace_nav {
+   border: none;
+   background: none;
+   color: var(--color-secundario);
+   font-size: 0.85rem;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+   cursor: pointer;
+  padding: 0.25rem 0;
+  font-weight: 400;
+  position: relative;
+  transition: font-weight 0.15s ease-out;
+ }
+
+ .enlace_nav::after {
+  content: none;
+ }
+
+.enlace_nav:hover {
+  font-weight: 700;
+ }
+

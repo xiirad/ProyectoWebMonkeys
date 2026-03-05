@@ -1,0 +1,66 @@
+ .seccion_legal {
+  display: block;
+   padding-bottom: 1rem;
+ }
+
+ .lista_horario {
+   display: grid;
+   gap: 0.3rem;
+  font-size: var(--tam-parrafo);
+ }
+
+ .fila_horario {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+ }
+
+ .fila_horario_dia {
+  color: var(--color-secundario);
+  opacity: 0.8;
+ }
+
+ .fila_horario_hora {
+   font-weight: 500;
+ }
+
+ .pie_monkeys {
+  margin-top: 0.75rem;
+  font-size: var(--tam-parrafo);
+  color: var(--color-secundario);
+  opacity: 0.8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 0.75rem;
+ }
+
+ .pie_enlaces {
+   display: flex;
+   gap: 0.75rem;
+ }
+
+ .pie_enlace {
+   cursor: pointer;
+ }
+
+.pie_columna_legal {
+  max-width: 480px;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.pie_columna_horario {
+  min-width: 220px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pie_firma {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: var(--tam-parrafo);
+  opacity: 0.7;
+}
+

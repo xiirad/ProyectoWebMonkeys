@@ -1,0 +1,104 @@
+:root {
+  --color-fondo: #05070a;
+  --color-principal: #6f8f56;
+  --color-secundario: #f3f1e7;
+  --color-acento: #1a9a8b;
+
+  --tam-enunciado: clamp(2rem, 2.6vw + 1rem, 2.6rem);
+  --tam-subenunciado: 0.9rem;
+  --tam-parrafo: 0.95rem;
+  --tam-precio: 1rem;
+}
+
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ html,
+ body {
+   height: 100%;
+ }
+
+ body {
+   margin: 0;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+   background-color: var(--color-fondo);
+   color: var(--color-secundario);
+ }
+
+ #root {
+   min-height: 100vh;
+ }
+
+ img {
+   max-width: 100%;
+   display: block;
+ }
+
+ a {
+   color: inherit;
+   text-decoration: none;
+ }
+
+ button {
+   font-family: inherit;
+ }
+
+ .pagina_monkeys {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--color-fondo);
+   color: var(--color-secundario);
+ }
+
+ .contenido_monkeys {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 4.5rem 1.25rem 3rem;
+ }
+
+ .seccion_bloque {
+   padding: 3rem 0;
+ }
+
+ .titulo_seccion {
+  font-size: var(--tam-enunciado);
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   margin-bottom: 1.5rem;
+   color: var(--color-principal);
+ }
+
+ .texto_secundario {
+   color: var(--color-secundario);
+   opacity: 0.82;
+ }
+
+ .grid_responsive {
+   display: grid;
+   gap: 1.5rem;
+ }
+
+ @media (min-width: 768px) {
+   .contenido_monkeys {
+     padding-inline: 2.5rem;
+   }
+
+   .grid_responsive_dos {
+     display: grid;
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+     gap: 2rem;
+     align-items: flex-start;
+   }
+ }
+
+ @media (min-width: 1024px) {
+   .contenido_monkeys {
+     padding-inline: 3.5rem;
+   }
+ }
+

@@ -1,0 +1,25 @@
+.cabecera_monkeys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.logo_imagen_monkeys {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.seccion_nav_ancla {
+  height: 1px;
+}
+
+@media (max-width: 640px) {
+  .cabecera_monkeys {
+    margin-top: 3.5rem;
+  }
+}
+
