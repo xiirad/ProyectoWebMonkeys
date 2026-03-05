@@ -199,12 +199,60 @@
   padding-left: 2rem;
 }
 
-@media (max-width: 640px) {
-  .tarjeta_burger_carta {
-    grid-template-columns: 1fr;
-    row-gap: 0.75rem;
+/* Móvil: borde visible en bloques carta y burgers en columna con foto a ancho completo */
+@media (max-width: 767px) {
+  .bloque_carta,
+  .bloque_carta_guarniciones {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
   }
 
+  .bloque_carta_guarniciones .grupo_carta_simple:nth-of-type(2) {
+    border-left: none;
+    border-top: 0.5px solid var(--color-secundario);
+    padding-left: 0;
+    padding-top: 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .grid_burgers_carta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tarjeta_burger_carta {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    width: 100%;
+    min-height: auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .burger_carta_imagen_contenedor {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    flex-shrink: 0;
+  }
+
+  .tarjeta_burger_carta .imagen_burger_carta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .tarjeta_burger_carta_contenido {
+    position: relative;
+    padding: 1rem 1.25rem;
+    background: var(--color-fondo);
+    background-image: none;
+  }
+}
+
+@media (max-width: 640px) {
   .item_carta_precio {
     justify-self: flex-start;
   }
