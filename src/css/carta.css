@@ -78,7 +78,6 @@
  .etiqueta_green {
    display: inline-flex;
    padding: 0.2rem 0.75rem;
-  border-radius: 999px;
   background-color: var(--color-fondo);
   color: var(--color-secundario);
   font-size: var(--tam-subenunciado);
@@ -102,7 +101,6 @@
   font-size: var(--tam-parrafo);
  }
 
-/* --- Burgers clásicas --- */
 .grid_burgers_carta .item_carta_nombre {
   font-size: calc(var(--tam-parrafo) * 1.1);
 }
@@ -129,8 +127,7 @@
 .tarjeta_burger_carta {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* cuadrado */
-  border-radius: 0.75rem;
+  padding-top: 100%;
   overflow: hidden;
   background-color: var(--color-fondo);
 }
@@ -146,7 +143,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
   opacity: 0.7;
 }
 
@@ -156,15 +153,21 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1.25rem;
-  gap: 0.25rem;
-  text-align: left;
+  padding: 0;
   z-index: 1;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.0) 0%,
     rgba(0, 0, 0, 0.65) 70%
   );
+}
+
+.tarjeta_burger_carta_info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
 }
 
 .grupo_carta_simple {
@@ -181,7 +184,7 @@
 
  @media (min-width: 768px) {
    .bloque_carta {
-     padding: 2rem 1.75rem;
+     padding: 3rem 1.75rem;
    }
 
   .bloque_carta_guarniciones {
@@ -199,12 +202,14 @@
   padding-left: 2rem;
 }
 
-/* Móvil: borde visible en bloques carta y burgers en columna con foto a ancho completo */
 @media (max-width: 767px) {
+  .seccion_carta {
+    gap: 2rem;
+  }
+
   .bloque_carta,
   .bloque_carta_guarniciones {
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 0.75rem;
+    padding: var(--mobile-gap) var(--mobile-margin);
   }
 
   .bloque_carta_guarniciones .grupo_carta_simple:nth-of-type(2) {
@@ -215,40 +220,82 @@
     margin-top: 0.25rem;
   }
 
+  .bloque_carta:has(.grid_burgers_carta) {
+    padding: 0;
+    margin: 0;
+    margin-inline: calc(-1 * var(--mobile-margin));
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .bloque_carta:has(.grid_burgers_carta) > .grupo_carta_titulo {
+    padding-inline: var(--mobile-margin);
+    margin-bottom: 0.75rem;
+  }
+
   .grid_burgers_carta {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    margin-inline: 0;
   }
 
   .tarjeta_burger_carta {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0;
-    width: 100%;
-    min-height: auto;
-    border-radius: 0.75rem;
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    margin-inline: calc(-50vw + 50%);
+    padding: 0;
+    height: 100vw;
+    min-height: 100vw;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
   }
 
   .burger_carta_imagen_contenedor {
-    position: relative;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    aspect-ratio: 16 / 10;
-    flex-shrink: 0;
+    height: 100%;
   }
 
   .tarjeta_burger_carta .imagen_burger_carta {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
   }
 
   .tarjeta_burger_carta_contenido {
-    position: relative;
-    padding: 1rem 1.25rem;
-    background: var(--color-fondo);
-    background-image: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.88) 100%
+    );
+  }
+
+  .tarjeta_burger_carta_info {
+    padding: 3rem  3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    overflow: hidden;
+  }
+
+  .seccion_carta {
+    overflow-x: hidden;
   }
 }
 

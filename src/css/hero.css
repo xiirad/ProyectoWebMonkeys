@@ -17,9 +17,17 @@
   height: 1px;
 }
 
+@media (max-width: 767px) {
+  .cabecera_monkeys {
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   .cabecera_monkeys {
     margin-top: 3.5rem;
+    margin-bottom: 2rem;
   }
 }
 

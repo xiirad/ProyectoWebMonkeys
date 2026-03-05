@@ -17,7 +17,6 @@
 
  .tarjeta_especial {
    padding: 1.4rem 1.25rem;
-  border-radius: 1.25rem;
   background-color: var(--color-fondo);
    display: grid;
    gap: 0.5rem;
@@ -48,6 +47,20 @@
   color: var(--color-secundario);
   opacity: 0.7;
  }
+
+@media (max-width: 767px) {
+  .seccion_burgers_especiales {
+    gap: var(--mobile-gap);
+  }
+
+  .grid_especiales {
+    gap: var(--mobile-gap);
+  }
+
+  .tarjeta_especial {
+    padding: var(--mobile-gap) var(--mobile-margin);
+  }
+}
 
  @media (min-width: 768px) {
    .grid_especiales {

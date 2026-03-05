@@ -24,7 +24,6 @@ function PaginaMonkeys() {
     if (!paginaRef.current) return
 
     const ctx = gsap.context(() => {
-      // entrada suave del logo al cargar
       gsap.from('.cabecera_monkeys', {
         y: -40,
         opacity: 0,
@@ -32,7 +31,6 @@ function PaginaMonkeys() {
         ease: 'power3.out',
       })
 
-      // aparicion suave de cada seccion al hacer scroll
       gsap.utils.toArray('.seccion_bloque').forEach((seccion) => {
         gsap.from(seccion, {
           y: 40,
@@ -47,7 +45,6 @@ function PaginaMonkeys() {
         })
       })
 
-      // items de carta (fritas, nachos, burgers)
       gsap.from('.grupo_carta_simple', {
         opacity: 0,
         y: 24,
@@ -74,7 +71,6 @@ function PaginaMonkeys() {
         },
       })
 
-      // burgers especiales
       gsap.from('.tarjeta_especial', {
         opacity: 0,
         y: 30,
@@ -88,7 +84,6 @@ function PaginaMonkeys() {
         },
       })
 
-      // sobre nosotros bloques
       gsap.from('.bloque_sobre', {
         opacity: 0,
         y: 30,
@@ -102,7 +97,6 @@ function PaginaMonkeys() {
         },
       })
 
-      // footer legal y horario
       gsap.from('.pie_monkeys', {
         opacity: 0,
         y: 20,

@@ -239,12 +239,14 @@ function SeccionCarta() {
                 />
               </div>
               <div className="tarjeta_burger_carta_contenido">
-                <div className="item_carta_nombre">{burger.nombre}</div>
-                <div className="item_carta_detalle">{burger.detalle}</div>
-                <div className="item_carta_detalle">
-                  Proteina {burger.proteina}
+                <div className="tarjeta_burger_carta_info">
+                  <div className="item_carta_nombre">{burger.nombre}</div>
+                  <div className="item_carta_detalle">{burger.detalle}</div>
+                  <div className="item_carta_detalle">
+                    Proteina {burger.proteina}
+                  </div>
+                  <div className="item_carta_precio">{burger.precio}</div>
                 </div>
-                <div className="item_carta_precio">{burger.precio}</div>
               </div>
             </article>
           ))}

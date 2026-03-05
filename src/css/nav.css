@@ -38,19 +38,14 @@
   transition: font-weight 0.15s ease-out;
  }
 
- .enlace_nav::after {
-  content: none;
- }
-
 .enlace_nav:hover {
   font-weight: 700;
  }
 
-/* --- Móvil: botón burger animado y menú desplegable --- */
 @media (max-width: 767px) {
   .barra_navegacion {
     justify-content: flex-end;
-    padding: 1.25rem 1.25rem;
+    padding: 1.25rem var(--mobile-margin);
   }
 
   .boton_burger {
@@ -82,7 +77,6 @@
     width: 1.5rem;
     height: 2px;
     background-color: var(--color-secundario);
-    border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.25s ease;
     transform-origin: center;
   }
@@ -109,7 +103,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1.75rem;
-    padding: 5rem 1.5rem 2rem;
+    padding: 5rem var(--mobile-margin) 2rem;
     background-color: var(--color-fondo);
     opacity: 0;
     visibility: hidden;

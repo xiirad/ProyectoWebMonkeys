@@ -10,7 +10,6 @@
 
  .bloque_sobre {
   background-color: var(--color-fondo);
-  border-radius: 1.5rem;
    padding: 1.5rem 1.25rem;
    display: grid;
    gap: 0.9rem;
@@ -53,7 +52,6 @@
  .icono_red_social {
    width: 34px;
    height: 34px;
-   border-radius: 999px;
    display: inline-flex;
    align-items: center;
    justify-content: center;
@@ -85,6 +83,20 @@
   color: var(--color-secundario);
   opacity: 0.8;
  }
+
+@media (max-width: 767px) {
+  .seccion_sobre {
+    gap: var(--mobile-gap);
+  }
+
+  .grid_sobre {
+    gap: var(--mobile-gap);
+  }
+
+  .bloque_sobre {
+    padding: var(--mobile-gap) var(--mobile-margin);
+  }
+}
 
  @media (min-width: 768px) {
    .grid_sobre {
