@@ -5,9 +5,14 @@
    z-index: 20;
    display: flex;
    justify-content: center;
+   align-items: center;
    padding: 2rem 1rem;
    background-color: var(--color-fondo);
    opacity: 0.96;
+ }
+
+ .boton_burger {
+   display: none;
  }
 
  .lista_nav {
@@ -40,4 +45,85 @@
 .enlace_nav:hover {
   font-weight: 700;
  }
+
+/* --- Móvil: botón burger animado y menú desplegable --- */
+@media (max-width: 767px) {
+  .barra_navegacion {
+    justify-content: flex-end;
+    padding: 1.25rem 1.25rem;
+  }
+
+  .boton_burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    gap: 0.35rem;
+    z-index: 25;
+    transition: transform 0.2s ease;
+  }
+
+  .boton_burger:hover {
+    transform: scale(1.05);
+  }
+
+  .boton_burger:active {
+    transform: scale(0.98);
+  }
+
+  .burger_linea {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--color-secundario);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.25s ease;
+    transform-origin: center;
+  }
+
+  .burger_linea_arriba { transform: none; }
+  .burger_linea_medio { opacity: 1; }
+  .burger_linea_abajo { transform: none; }
+
+  .boton_burger.burger_abierto .burger_linea_arriba {
+    transform: translateY(0.37rem) rotate(45deg);
+  }
+  .boton_burger.burger_abierto .burger_linea_medio {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .boton_burger.burger_abierto .burger_linea_abajo {
+    transform: translateY(-0.37rem) rotate(-45deg);
+  }
+
+  .lista_nav {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.75rem;
+    padding: 5rem 1.5rem 2rem;
+    background-color: var(--color-fondo);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .lista_nav.lista_nav_visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lista_nav .enlace_nav {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+  }
+}
 
