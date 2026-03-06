@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logoMonkeys from '../img/Monkeys_WhiteLogo.png'
 
 function NavegacionSuperior() {
   const [menuAbierto, setMenuAbierto] = useState(false)
@@ -13,6 +14,17 @@ function NavegacionSuperior() {
 
   return (
     <nav className="barra_navegacion" aria-label="Navegación principal">
+      <a
+        href="#inicio_monkeys"
+        className="logo_nav"
+        onClick={(e) => {
+          e.preventDefault()
+          manejarScrollSuave('inicio_monkeys')
+        }}
+        aria-label="Ir al inicio"
+      >
+        <img src={logoMonkeys} alt="Monkeys" className="logo_nav_imagen" />
+      </a>
       <button
         type="button"
         className={`boton_burger ${menuAbierto ? 'burger_abierto' : ''}`}
@@ -33,7 +45,8 @@ function NavegacionSuperior() {
             className="enlace_nav"
             onClick={() => manejarScrollSuave('inicio_monkeys')}
           >
-            Inicio
+            <span className="enlace_nav_sizer" aria-hidden>Inicio</span>
+            <span className="enlace_nav_visible">Inicio</span>
           </button>
         </li>
         <li>
@@ -42,7 +55,8 @@ function NavegacionSuperior() {
             className="enlace_nav"
             onClick={() => manejarScrollSuave('seccion_carta')}
           >
-            Carta
+            <span className="enlace_nav_sizer" aria-hidden>Carta</span>
+            <span className="enlace_nav_visible">Carta</span>
           </button>
         </li>
         <li>
@@ -51,7 +65,8 @@ function NavegacionSuperior() {
             className="enlace_nav"
             onClick={() => manejarScrollSuave('seccion_burgers_especiales')}
           >
-            Burgers especiales
+            <span className="enlace_nav_sizer" aria-hidden>Burgers especiales</span>
+            <span className="enlace_nav_visible">Burgers especiales</span>
           </button>
         </li>
         <li>
@@ -60,7 +75,8 @@ function NavegacionSuperior() {
             className="enlace_nav"
             onClick={() => manejarScrollSuave('seccion_sobre')}
           >
-            Sobre nosotros
+            <span className="enlace_nav_sizer" aria-hidden>Sobre nosotros</span>
+            <span className="enlace_nav_visible">Sobre nosotros</span>
           </button>
         </li>
       </ul>

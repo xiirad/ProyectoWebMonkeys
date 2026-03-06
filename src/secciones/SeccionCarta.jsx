@@ -189,7 +189,7 @@ function SeccionCarta() {
       className="seccion_bloque seccion_carta"
       id="seccion_carta"
     >
-      <div>
+      <div className="bloque_enunciado">
         <div className="subtitulo_carta">Burgers en carta</div>
         <h2 className="titulo_seccion">La carta Monkeys</h2>
         <p className="texto_destacado_carta texto_secundario">
@@ -255,7 +255,7 @@ function SeccionCarta() {
 
       <div className="bloque_carta">
         <div className="bloque_green">
-          <div>
+          <div className="bloque_enunciado green_enunciado">
             <div className="etiqueta_green">The green burger – Monkeys</div>
             <h3 className="titulo_seccion">La opcion 100% vegana</h3>
             <p className="descripcion_green">

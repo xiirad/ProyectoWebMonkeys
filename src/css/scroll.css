@@ -1,26 +1,26 @@
- html {
-   scrollbar-width: thin;
-   scrollbar-color: var(--color-principal) var(--color-fondo);
- }
+/* Ocultar todas las scrollbars (el scroll sigue funcionando con rueda/touch) */
+html {
+  scrollbar-width: none; /* Firefox */
+}
 
- body::-webkit-scrollbar {
-   width: 8px;
- }
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 
- body::-webkit-scrollbar-track {
-   background-color: var(--color-fondo);
- }
+body::-webkit-scrollbar {
+  display: none;
+}
 
- body::-webkit-scrollbar-thumb {
-   background-color: var(--color-principal);
- }
+* {
+  scrollbar-width: none; /* Firefox en cualquier contenedor con scroll */
+}
 
- body::-webkit-scrollbar-thumb:hover {
-   background-color: var(--color-acento);
- }
+*::-webkit-scrollbar {
+  display: none; /* WebKit en cualquier contenedor */
+}
 
- ::selection {
-   background-color: var(--color-principal);
-   color: var(--color-fondo);
- }
 
+::selection {
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+}

@@ -1,16 +1,36 @@
 .cabecera_monkeys {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 6rem;
   margin-bottom: 2rem;
+  min-height: 50vh;
+  width: 100vw;
+  margin-inline: calc(-50vw + 50%);
+  overflow: hidden;
+}
+
+.hero_fondo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: url('../img/MonkeysHeaderPhoto.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .logo_imagen_monkeys {
-  max-width: 600px;
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
   width: 100%;
   height: auto;
-  display: block;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .seccion_nav_ancla {
@@ -19,7 +39,7 @@
 
 @media (max-width: 767px) {
   .cabecera_monkeys {
-    margin-top: 4rem;
+    margin-top: 8rem;
     margin-bottom: 2.5rem;
   }
 }
@@ -30,4 +50,3 @@
     margin-bottom: 2rem;
   }
 }
-

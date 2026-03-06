@@ -1,122 +1,136 @@
- .seccion_carta {
-   display: flex;
-   flex-direction: column;
-   gap: 2.5rem;
- }
+.seccion_carta {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
 
- .subtitulo_carta {
+ .bloque_enunciado .titulo_seccion,
+.seccion_carta .bloque_enunciado .texto_destacado_carta {
+  margin-inline: 0;
+  padding-inline: 0;
+}
+.bloque_enunciado { 
+  margin: 0 2rem;
+  margin-left: 26px;
+}
+
+.green_enunciado {
+  margin: 0;
+}
+
+.subtitulo_carta {
   font-size: var(--tam-subenunciado);
-   letter-spacing: 0.18em;
-   text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--color-secundario);
   opacity: 0.7;
-   margin-bottom: 0.5rem;
- }
+  margin-bottom: 0.5rem;
+}
 
- .texto_destacado_carta {
+.texto_destacado_carta {
   font-size: var(--tam-parrafo);
-   max-width: 32rem;
- }
+  max-width: 32rem;
+}
 
- .bloque_carta {
+.bloque_carta {
   padding: 1.5rem 1.25rem;
   display: grid;
   gap: 1.75rem;
- }
+}
 
- .grupo_carta_titulo {
+.grupo_carta_titulo {
   font-size: var(--tam-subenunciado);
-   letter-spacing: 0.16em;
-   text-transform: uppercase;
-   color: var(--color-principal);
-   margin-bottom: 1rem;
- }
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
 
- .lista_items_carta {
-   display: grid;
-   gap: 0.9rem;
- }
+.lista_items_carta {
+  display: grid;
+  gap: 0.9rem;
+}
 
- .item_carta {
-   display: flex;
-   justify-content: space-between;
-   gap: 1rem;
- }
+.item_carta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
- .item_carta_contenido {
-   max-width: 82%;
- }
+.item_carta_contenido {
+  max-width: 82%;
+}
 
- .item_carta_nombre {
-   font-weight: 600;
+.item_carta_nombre {
+  font-weight: 600;
   font-size: var(--tam-parrafo);
- }
+}
 
- .item_carta_detalle {
+.item_carta_detalle {
   font-size: var(--tam-parrafo);
   color: var(--color-secundario);
   opacity: 0.78;
-   margin-top: 0.1rem;
- }
+  margin-top: 0.1rem;
+}
 
- .item_carta_precio {
-   font-weight: 600;
-   white-space: nowrap;
+.item_carta_precio {
+  font-weight: 600;
+  white-space: nowrap;
   font-size: var(--tam-precio);
- }
+}
 
 .bloque_carta_guarniciones {
   display: grid;
   gap: 2rem;
 }
 
- .bloque_green {
-   display: grid;
-   gap: 1rem;
- }
+.bloque_green {
+  display: grid;
+  gap: 1rem;
+}
 
- .etiqueta_green {
-   display: inline-flex;
-   padding: 0.2rem 0.75rem;
+.etiqueta_green {
+  display: inline-flex;
+  padding: 0.2rem 0rem;
   background-color: var(--color-fondo);
   color: var(--color-secundario);
   font-size: var(--tam-subenunciado);
-   text-transform: uppercase;
-   letter-spacing: 0.16em;
- }
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
 
- .descripcion_green {
+.descripcion_green {
   font-size: var(--tam-parrafo);
   color: var(--color-secundario);
   opacity: 0.82;
- }
+}
 
- .grid_green {
-   display: grid;
-   gap: 1.25rem;
- }
+.grid_green {
+  display: grid;
+  gap: 1.25rem;
+}
 
- .item_green_titulo {
-   font-weight: 600;
+.item_green_titulo {
+  font-weight: 600;
   font-size: var(--tam-parrafo);
- }
+}
+
+.item_green_detalle {
+  font-size: var(--tam-parrafo);
+  color: var(--color-secundario);
+  opacity: 0.8;
+}
+
+.item_green_precio {
+  margin-top: 0.35rem;
+  font-size: var(--tam-precio);
+  color: var(--color-secundario);
+  opacity: 0.85;
+}
 
 .grid_burgers_carta .item_carta_nombre {
   font-size: calc(var(--tam-parrafo) * 1.1);
 }
-
- .item_green_detalle {
-  font-size: var(--tam-parrafo);
-  color: var(--color-secundario);
-  opacity: 0.8;
- }
-
- .item_green_precio {
-   margin-top: 0.35rem;
-  font-size: var(--tam-precio);
-  color: var(--color-secundario);
-  opacity: 0.85;
- }
 
 .grid_burgers_carta {
   display: grid;
@@ -145,6 +159,11 @@
   object-fit: cover;
   object-position: center center;
   opacity: 0.7;
+  transition: opacity 0.25s ease;
+}
+
+.tarjeta_burger_carta:hover .imagen_burger_carta {
+  opacity: 1;
 }
 
 .tarjeta_burger_carta_contenido {
@@ -155,11 +174,7 @@
   justify-content: flex-end;
   padding: 0;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.0) 0%,
-    rgba(0, 0, 0, 0.65) 70%
-  );
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 70%);
 }
 
 .tarjeta_burger_carta_info {
@@ -182,36 +197,33 @@
   margin-bottom: 0.75rem;
 }
 
- @media (min-width: 768px) {
-   .bloque_carta {
-     padding: 3rem 1.75rem;
-   }
-
-  .bloque_carta_guarniciones {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 3rem;
-  }
-
-  .grid_green {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
- }
-
 .bloque_carta_guarniciones .grupo_carta_simple:nth-of-type(2) {
   border-left: 0.5px solid var(--color-secundario);
   padding-left: 2rem;
 }
 
+@media (min-width: 768px) {
+  .bloque_carta {
+    padding: 3rem 1.75rem;
+  }
+  .bloque_carta_guarniciones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3rem;
+  }
+  .grid_green {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 767px) {
   .seccion_carta {
     gap: 2rem;
+    overflow-x: hidden;
   }
-
   .bloque_carta,
   .bloque_carta_guarniciones {
     padding: var(--mobile-gap) var(--mobile-margin);
   }
-
   .bloque_carta_guarniciones .grupo_carta_simple:nth-of-type(2) {
     border-left: none;
     border-top: 0.5px solid var(--color-secundario);
@@ -219,30 +231,25 @@
     padding-top: 1.5rem;
     margin-top: 0.25rem;
   }
-
   .bloque_carta:has(.grid_burgers_carta) {
     padding: 0;
     margin: 0;
-    margin-inline: calc(-1 * var(--mobile-margin));
+    margin-inline: 0;
     width: 100vw;
     max-width: 100vw;
     box-sizing: border-box;
   }
-
   .bloque_carta:has(.grid_burgers_carta) > .grupo_carta_titulo {
     padding-inline: var(--mobile-margin);
     margin-bottom: 0.75rem;
   }
-
   .grid_burgers_carta {
     display: flex;
     flex-direction: column;
     gap: 0;
     margin: 0;
     padding: 0;
-    margin-inline: 0;
   }
-
   .tarjeta_burger_carta {
     position: relative;
     width: 100vw;
@@ -255,21 +262,18 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
   }
-
   .burger_carta_imagen_contenedor {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
   }
-
   .tarjeta_burger_carta .imagen_burger_carta {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
   }
-
   .tarjeta_burger_carta_contenido {
     position: absolute;
     inset: 0;
@@ -278,24 +282,15 @@
     justify-content: flex-end;
     padding: 0;
     z-index: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.5) 50%,
-      rgba(0, 0, 0, 0.88) 100%
-    );
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.88) 100%);
   }
-
   .tarjeta_burger_carta_info {
-    padding: 3rem  3rem;
+    padding: 2rem  3rem;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
     overflow: hidden;
-  }
-
-  .seccion_carta {
-    overflow-x: hidden;
+    text-align: left;
+    width: 25rem;
   }
 }
 
@@ -304,4 +299,3 @@
     justify-self: flex-start;
   }
 }
-

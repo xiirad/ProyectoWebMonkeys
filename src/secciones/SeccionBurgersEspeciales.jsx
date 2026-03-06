@@ -4,7 +4,7 @@ function SeccionBurgersEspeciales() {
       className="seccion_bloque seccion_burgers_especiales"
       id="seccion_burgers_especiales"
     >
-      <div>
+      <div className="bloque_enunciado">
         <h2 className="titulo_seccion">Burgers especiales</h2>
         <p className="texto_intro_especiales">
           Ediciones limitadas, colaboraciones y las locuras que solo un

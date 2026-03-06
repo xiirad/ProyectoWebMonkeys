@@ -24,11 +24,11 @@ function PaginaMonkeys() {
     if (!paginaRef.current) return
 
     const ctx = gsap.context(() => {
-      gsap.from('.cabecera_monkeys', {
-        y: -40,
+      gsap.from('.logo_imagen_monkeys', {
+        scale: 2.5,
         opacity: 0,
-        duration: 1,
-        ease: 'power3.out',
+        duration: 1.1,
+        ease: 'back.inOutw',
       })
 
       gsap.utils.toArray('.seccion_bloque').forEach((seccion) => {

@@ -1,31 +1,31 @@
- .seccion_legal {
-  display: block;
-   padding-bottom: 1rem;
- }
+.seccion_legal {
+  padding-bottom: 1rem;
+}
 
- .lista_horario {
-   display: grid;
-   gap: 0.3rem;
+.lista_horario {
+  display: grid;
+  gap: 0.3rem;
   font-size: var(--tam-parrafo);
- }
+}
 
- .fila_horario {
-   display: flex;
-   justify-content: space-between;
-   gap: 1rem;
- }
+.fila_horario {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
- .fila_horario_dia {
+.fila_horario_dia {
   color: var(--color-secundario);
   opacity: 0.8;
- }
+}
 
- .fila_horario_hora {
-   font-weight: 500;
- }
+.fila_horario_hora {
+  font-weight: 500;
+}
 
- .pie_monkeys {
+.pie_monkeys {
   margin-top: 0.75rem;
+  padding-top: 0.75rem;
   font-size: var(--tam-parrafo);
   color: var(--color-secundario);
   opacity: 0.8;
@@ -33,17 +33,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1.5rem;
-  padding-top: 0.75rem;
- }
+}
 
- .pie_enlaces {
-   display: flex;
-   gap: 0.75rem;
- }
+.pie_enlaces {
+  display: flex;
+  gap: 0.75rem;
+}
 
- .pie_enlace {
-   cursor: pointer;
- }
+.pie_enlace {
+  cursor: pointer;
+}
 
 .pie_columna_legal {
   max-width: 480px;
@@ -68,9 +67,7 @@
   .seccion_legal {
     padding-bottom: var(--mobile-gap);
   }
-
   .pie_monkeys {
     gap: var(--mobile-gap);
   }
 }
-
